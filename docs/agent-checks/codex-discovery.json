@@ -1,0 +1,164 @@
+{
+  "cliVersion": "codex-cli 0.132.0",
+  "check": "local app-server skills/list; no model turn",
+  "cwd": "E:\\lazul\\Desktop\\New Project",
+  "expected": [
+    "astrology-brand-experience",
+    "astrology-chart-engine",
+    "astrology-content-seo",
+    "astrology-domain",
+    "astrology-interpretation",
+    "astrology-qa",
+    "astrology-release",
+    "astrology-ui",
+    "systematic-debugging",
+    "test-driven-development",
+    "tuvi-chart-engine",
+    "tuvi-domain",
+    "tuvi-interpretation",
+    "tuvi-qa",
+    "tuvi-release",
+    "tuvi-ui",
+    "ui-ux-pro-max",
+    "verification-before-completion",
+    "writing-plans"
+  ],
+  "local": [
+    {
+      "name": "astrology-brand-experience",
+      "description": "Create original Western Astrology brand storytelling and grounded constellation/fate experiences across beginner and advanced views without copying game IP.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-brand-experience\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-chart-engine",
+      "description": "Specify and verify deterministic Western natal calculations using ephemerides, coordinates, timezone/DST, angles, house systems, retrograde and aspects.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-chart-engine\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-content-seo",
+      "description": "Plan and review original Vietnamese zodiac pages and astrology knowledge content with beginner and advanced layers, sources, SEO and privacy boundaries.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-content-seo\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-domain",
+      "description": "Research Western Astrology concepts, zodiac frames, houses and aspect conventions, with source-backed recommendations and no Tu Vi rule reuse.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-domain\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-interpretation",
+      "description": "Explain Western natal Sun, Moon, Rising, planets, houses and aspects from supplied chart evidence, with uncertainty and explicit Mock or Real mode.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-interpretation\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-qa",
+      "description": "Verify Western natal calculations, timezone/DST edge cases, unknown-time partial charts, grounded Mock AI and responsive browser privacy and security flows.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-qa\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-release",
+      "description": "Prepare Western Astrology website CI/CD, beta deployment, ephemeris licensing, server-only AI configuration, SEO privacy and rollback when authorized.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-release\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "astrology-ui",
+      "description": "Design mobile-first Western Astrology websites, beginner and advanced views, zodiac discovery and accessible interactive circular natal charts with UI UX Pro Max.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\astrology-ui\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\systematic-debugging\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\test-driven-development\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "tuvi-chart-engine",
+      "description": "Deprecated for current project. Legacy Tu Vi chart calculation only, never Western natal positions or houses. Use astrology-chart-engine for the active MVP.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\tuvi-chart-engine\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "tuvi-domain",
+      "description": "Deprecated for current project. Legacy Vietnamese Tu Vi research only; never use for Western Astrology. Use astrology-domain for the active MVP.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\tuvi-domain\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "tuvi-interpretation",
+      "description": "Deprecated for current project. Legacy Tu Vi interpretation only; never interpret Western natal data with these rules. Use astrology-interpretation.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\tuvi-interpretation\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "tuvi-qa",
+      "description": "Deprecated for current project. Legacy Tu Vi rule tests only; use astrology-qa for Western astronomy and website verification.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\tuvi-qa\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "tuvi-release",
+      "description": "Deprecated for current project. Legacy Tu Vi release guidance only; use astrology-release for the current Western Astrology website.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\tuvi-release\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "tuvi-ui",
+      "description": "Deprecated for current project. Legacy twelve-palace Tu Vi UI only, not a Western natal wheel. Use astrology-ui for the current website.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\tuvi-ui\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "description": "Research UI and UX design choices using a local searchable dataset for web, mobile and desktop; use alongside astrology-ui for the active Western Astrology website.",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\ui-ux-pro-max\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\verification-before-completion\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "path": "E:\\lazul\\Desktop\\New Project\\.agents\\skills\\writing-plans\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    }
+  ],
+  "missing": [],
+  "duplicates": [],
+  "errors": []
+}

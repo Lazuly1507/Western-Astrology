@@ -1,0 +1,74 @@
+﻿[
+    {
+        "repo":  "obra/superpowers",
+        "commit":  "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+        "pushed":  "2026-10-20T15:30:53Z",
+        "archived":  false,
+        "license":  "MIT",
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "anthropics/skills",
+        "commit":  "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "pushed":  "2026-10-09T18:45:52Z",
+        "archived":  false,
+        "license":  null,
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "affaan-m/ECC",
+        "commit":  "07971588f8ac7a60080ba8c1b7920c9e8e733e7d",
+        "pushed":  "2026-10-20T14:51:29Z",
+        "archived":  false,
+        "license":  "MIT",
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit":  "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+        "pushed":  "2026-10-15T02:04:34Z",
+        "archived":  false,
+        "license":  "MIT",
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "vercel-labs/skills",
+        "commit":  "a80e4c9d12d607631249d4d7d059f835d4b2f13a",
+        "pushed":  "2026-10-19T20:34:22Z",
+        "archived":  false,
+        "license":  "MIT",
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "hung-ngm/tu-vi-dau-so",
+        "commit":  "d0238e9ee9f1a8a1603f5ff1328b18bf6e4635b7",
+        "pushed":  "2026-03-07T08:59:54Z",
+        "archived":  false,
+        "license":  null,
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "duandigi/tu-vi-dau-so-research",
+        "commit":  "91f8a06f1bca2fb271791785937265ea78d7f858",
+        "pushed":  "2026-07-12T09:36:32Z",
+        "archived":  false,
+        "license":  "MIT",
+        "branch":  "main",
+        "truncated":  false
+    },
+    {
+        "repo":  "nngocduong92/an_sao_tu_vi",
+        "commit":  "760f9985bb289d8dc5238a24548cf1fdb37e68bf",
+        "pushed":  "2025-11-14T10:48:38Z",
+        "archived":  false,
+        "license":  null,
+        "branch":  "claude/tu-vi-astrology-calculator-01MmSRVw7noP82JaeGrinyU4",
+        "truncated":  false
+    }
+]

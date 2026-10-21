@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-21",
+  "check": "Local document links, deliverable presence, JSON parse/system identity and deprecated skill policies. Does not validate numerical engine or JSON schema semantics.",
+  "documents": 22,
+  "localLinks": 83,
+  "explicitOnlyTuvi": [
+    "tuvi-chart-engine",
+    "tuvi-domain",
+    "tuvi-interpretation",
+    "tuvi-qa",
+    "tuvi-release",
+    "tuvi-ui"
+  ],
+  "failures": []
+}

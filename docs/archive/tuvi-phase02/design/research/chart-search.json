@@ -1,0 +1,56 @@
+﻿{
+  "domain": "chart",
+  "query": "dense chart accessible",
+  "file": "charts.csv",
+  "count": 3,
+  "results": [
+    {
+      "Data Type": "Performance vs Target",
+      "Keywords": "performance, target, kpi, gauge, goal, threshold, progress, accessible chart, keyboard accessible chart",
+      "Best Chart Type": "Gauge Chart or Bullet Chart",
+      "Secondary Options": "Dial, Thermometer",
+      "When to Use": "Single KPI measured against a defined target or threshold; dashboard summary context",
+      "When NOT to Use": "No target or benchmark exists; comparing multiple KPIs at once (use bullet chart grid)",
+      "Data Volume Threshold": "Single metric per gauge; for 3+ KPIs use bullet chart grid layout",
+      "Color Guidance": "Performance: Red → Yellow → Green gradient. Target: marker line. Threshold zones clearly differentiated",
+      "Accessibility Grade": "deprecated: use Accessibility Risk",
+      "Accessibility Risk": "risk:low",
+      "Accessibility Notes": "Place the number and target text beside the gauge and label threshold zones; red/yellow/green alone is insufficient.",
+      "A11y Fallback": "Visible KPI/target text and a one-row data table plus status summary. Keyboard: focus reveals the same detail as hover.",
+      "Library Recommendation": "D3.js, ApexCharts, Custom SVG",
+      "Interactive Level": "Hover"
+    },
+    {
+      "Data Type": "Proportional / Percentage",
+      "Keywords": "waffle, percentage, proportion, progress, filled, grid, accessible chart, keyboard accessible chart",
+      "Best Chart Type": "Waffle Chart",
+      "Secondary Options": "Pictogram, Stacked Bar 100%",
+      "When to Use": "Showing what fraction of a whole is filled; percentage progress in a visually engaging and accessible format",
+      "When NOT to Use": "More than 5 categories (use stacked bar); exact values matter over visual proportion; very tight space",
+      "Data Volume Threshold": "10×10 grid standard (100 cells); for > 5 categories switch to stacked 100% bar",
+      "Color Guidance": "3–5 categories max. 2–3px gap between cells. Each category a distinct accessible color pair",
+      "Accessibility Grade": "deprecated: use Accessibility Risk",
+      "Accessibility Risk": "risk:low",
+      "Accessibility Notes": "Label each category and percentage and add patterns or symbols; filled-cell color alone is insufficient.",
+      "A11y Fallback": "Percentage table/list plus part-to-whole summary. Keyboard: focus reveals each cell value.",
+      "Library Recommendation": "D3.js, React-Waffle, Custom CSS Grid",
+      "Interactive Level": "Hover"
+    },
+    {
+      "Data Type": "Stock / Trading OHLC",
+      "Keywords": "stock, trading, ohlc, candlestick, finance, price, volume, accessible chart, keyboard accessible chart",
+      "Best Chart Type": "Candlestick Chart",
+      "Secondary Options": "OHLC Bar, Heikin-Ashi",
+      "When to Use": "Financial time-series with Open/High/Low/Close data; trading or investment product context only",
+      "When NOT to Use": "Non-financial audience; no OHLC data available (use line chart); accessibility-first context",
+      "Data Volume Threshold": "Real-time: Canvas required. Historical: paginate by time range. Max 500 candles visible at once",
+      "Color Guidance": "Bullish: #26A69A. Bearish: #EF5350. Volume bars: 40% opacity below. Body fill vs hollow for OHLC style",
+      "Accessibility Grade": "deprecated: use Accessibility Risk",
+      "Accessibility Risk": "risk:conditional",
+      "Accessibility Notes": "Use filled versus hollow candles and OHLC text values; bullish/bearish meaning cannot depend on color. Do not rely on color alone.",
+      "A11y Fallback": "Sortable OHLC table plus daily-change summary. Keyboard: focus reveals candle values; +/- buttons zoom; Reset restores range; live updates do not steal focus.",
+      "Library Recommendation": "Lightweight Charts (TradingView), ApexCharts",
+      "Interactive Level": "Real-time + Hover + Zoom"
+    }
+  ]
+}

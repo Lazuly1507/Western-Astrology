@@ -1,0 +1,333 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proposed Western natal artifact (not approved)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "systemId",
+    "revision",
+    "rulesVersion",
+    "timeStatus",
+    "provenance",
+    "bodies",
+    "angles",
+    "houses",
+    "aspects"
+  ],
+  "properties": {
+    "systemId": {
+      "const": "western-astrology"
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rulesVersion": {
+      "type": "string"
+    },
+    "timeStatus": {
+      "enum": [
+        "known",
+        "unknown",
+        "interval"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "providerVersion",
+        "ephemerisHash",
+        "tzdbVersion",
+        "frame",
+        "houseSystem",
+        "requestedFlags",
+        "returnedFlags"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string"
+        },
+        "providerVersion": {
+          "type": "string"
+        },
+        "ephemerisHash": {
+          "type": "string"
+        },
+        "tzdbVersion": {
+          "type": "string"
+        },
+        "frame": {
+          "enum": [
+            "tropical",
+            "sidereal"
+          ]
+        },
+        "ayanamsha": {
+          "type": "string"
+        },
+        "houseSystem": {
+          "enum": [
+            "placidus",
+            "whole-sign",
+            "equal",
+            "unavailable"
+          ]
+        },
+        "requestedFlags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "returnedFlags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "bodies": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "longitude",
+          "speed",
+          "motion"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "sun",
+              "moon",
+              "mercury",
+              "venus",
+              "mars",
+              "jupiter",
+              "saturn",
+              "uranus",
+              "neptune",
+              "pluto"
+            ]
+          },
+          "longitude": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMaximum": 360
+          },
+          "speed": {
+            "type": "number"
+          },
+          "motion": {
+            "enum": [
+              "direct",
+              "retrograde",
+              "stationary"
+            ]
+          }
+        }
+      }
+    },
+    "angles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "longitude"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "asc",
+              "mc"
+            ]
+          },
+          "longitude": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMaximum": 360
+          }
+        }
+      }
+    },
+    "houses": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "exclusiveMaximum": 360
+      }
+    },
+    "aspects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "a",
+          "b",
+          "angle",
+          "orb",
+          "certainty"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "a": {
+            "type": "string"
+          },
+          "b": {
+            "type": "string"
+          },
+          "angle": {
+            "enum": [
+              0,
+              60,
+              90,
+              120,
+              180
+            ]
+          },
+          "orb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "certainty": {
+            "enum": [
+              "stable",
+              "interval-dependent"
+            ]
+          }
+        }
+      }
+    },
+    "intervalEvidence": {
+      "type": "object",
+      "required": [
+        "startUTC",
+        "endUTC",
+        "bodyRanges"
+      ],
+      "properties": {
+        "startUTC": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endUTC": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "bodyRanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "bodyId",
+              "ranges",
+              "possibleSigns"
+            ],
+            "properties": {
+              "bodyId": {
+                "type": "string"
+              },
+              "ranges": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "possibleSigns": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 11
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "timeStatus": {
+            "const": "known"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "angles": {
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "houses": {
+            "minItems": 12,
+            "maxItems": 12
+          }
+        }
+      },
+      "else": {
+        "required": [
+          "intervalEvidence"
+        ],
+        "properties": {
+          "angles": {
+            "maxItems": 0
+          },
+          "houses": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "frame": {
+                "const": "sidereal"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "required": [
+              "ayanamsha"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Candidate contract only. bodies longitudes for unknown/interval are labeled reference positions, not certain birth positions; UI must use intervalEvidence. Application validation must check body uniqueness, IDs, aspect geometry, house ordering, provenance, interval extrema and no certainty fabricated. Known-time polar failure needs explicit alternative selection or error before this artifact is emitted."
+}

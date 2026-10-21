@@ -1,0 +1,3 @@
+.agent-setup/validator/node_modules/
+__pycache__/
+*.pyc

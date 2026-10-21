@@ -1,0 +1,102 @@
+{
+  "check": "YAML parser, metadata, local entrypoint links, placeholders and installed file checksums",
+  "results": [
+    {
+      "name": "astrology-brand-experience",
+      "yaml": "valid",
+      "descriptionLength": 156
+    },
+    {
+      "name": "astrology-chart-engine",
+      "yaml": "valid",
+      "descriptionLength": 152
+    },
+    {
+      "name": "astrology-content-seo",
+      "yaml": "valid",
+      "descriptionLength": 152
+    },
+    {
+      "name": "astrology-domain",
+      "yaml": "valid",
+      "descriptionLength": 142
+    },
+    {
+      "name": "astrology-interpretation",
+      "yaml": "valid",
+      "descriptionLength": 147
+    },
+    {
+      "name": "astrology-qa",
+      "yaml": "valid",
+      "descriptionLength": 156
+    },
+    {
+      "name": "astrology-release",
+      "yaml": "valid",
+      "descriptionLength": 150
+    },
+    {
+      "name": "astrology-ui",
+      "yaml": "valid",
+      "descriptionLength": 162
+    },
+    {
+      "name": "systematic-debugging",
+      "yaml": "valid",
+      "descriptionLength": 91
+    },
+    {
+      "name": "test-driven-development",
+      "yaml": "valid",
+      "descriptionLength": 79
+    },
+    {
+      "name": "tuvi-chart-engine",
+      "yaml": "valid",
+      "descriptionLength": 156
+    },
+    {
+      "name": "tuvi-domain",
+      "yaml": "valid",
+      "descriptionLength": 144
+    },
+    {
+      "name": "tuvi-interpretation",
+      "yaml": "valid",
+      "descriptionLength": 148
+    },
+    {
+      "name": "tuvi-qa",
+      "yaml": "valid",
+      "descriptionLength": 126
+    },
+    {
+      "name": "tuvi-release",
+      "yaml": "valid",
+      "descriptionLength": 132
+    },
+    {
+      "name": "tuvi-ui",
+      "yaml": "valid",
+      "descriptionLength": 136
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "yaml": "valid",
+      "descriptionLength": 164
+    },
+    {
+      "name": "verification-before-completion",
+      "yaml": "valid",
+      "descriptionLength": 225
+    },
+    {
+      "name": "writing-plans",
+      "yaml": "valid",
+      "descriptionLength": 84
+    }
+  ],
+  "verifiedFiles": 116,
+  "failures": []
+}

@@ -1,0 +1,6 @@
+{
+  "scope": "Workspace text artifacts, excluding node_modules, .git and Python caches; no global credential files read",
+  "scannedFiles": 235,
+  "candidateSecrets": [],
+  "limitations": "Pattern scan is not an exhaustive DLP audit; synthetic inputs only in authored walkthroughs. Candidate values are never printed."
+}

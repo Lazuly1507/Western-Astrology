@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tuvi-studio:tuvi-vn:chart:proposal-1",
+  "title": "Tu Vi VN computed chart candidate contract - not an approved ruleset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["systemId", "artifactType", "schemaVersion", "status", "chartId", "revision", "provenance", "normalization", "menhBranchId", "thanBranchId", "cuc", "palaces", "cycles", "contentHash", "warnings"],
+  "properties": {
+    "systemId": {"const": "tuvi-vn"},
+    "artifactType": {"const": "natal-chart"},
+    "schemaVersion": {"const": "proposal-1"},
+    "status": {"const": "computed"},
+    "chartId": {"type": "string", "minLength": 1, "maxLength": 100},
+    "revision": {"type": "integer", "minimum": 1},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["engineVersion", "rulesetId", "rulesetVersion", "calendarVersion", "tzdbVersion", "approvedRuleManifestHash"],
+      "properties": {
+        "engineVersion": {"type": "string", "minLength": 1},
+        "rulesetId": {"type": "string", "minLength": 1},
+        "rulesetVersion": {"type": "string", "minLength": 1},
+        "calendarVersion": {"type": "string", "minLength": 1},
+        "tzdbVersion": {"type": "string", "minLength": 1},
+        "approvedRuleManifestHash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "normalization": {
+      "type": "object", "additionalProperties": false,
+      "required": ["birthTimeZone", "calendarTimeZone", "offsetSeconds", "solarDate", "lunarDate", "hourBranchId", "dayBoundaryRuleId", "leapHandlingRuleId"],
+      "properties": {
+        "birthTimeZone": {"type": "string", "minLength": 1},
+        "calendarTimeZone": {"type": "string", "minLength": 1},
+        "offsetSeconds": {"type": "integer", "minimum": -50400, "maximum": 50400},
+        "solarDate": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "lunarDate": {
+          "type": "object", "additionalProperties": false,
+          "required": ["year", "month", "day", "isLeapMonth"],
+          "properties": {"year": {"type": "integer"}, "month": {"type": "integer", "minimum": 1, "maximum": 12}, "day": {"type": "integer", "minimum": 1, "maximum": 30}, "isLeapMonth": {"type": "boolean"}}
+        },
+        "hourBranchId": {"$ref": "#/$defs/branch"},
+        "dayBoundaryRuleId": {"$ref": "#/$defs/ruleId"},
+        "leapHandlingRuleId": {"$ref": "#/$defs/ruleId"}
+      }
+    },
+    "menhBranchId": {"$ref": "#/$defs/branch"},
+    "thanBranchId": {"$ref": "#/$defs/branch"},
+    "cuc": {
+      "type": "object", "additionalProperties": false,
+      "required": ["element", "number", "ruleId"],
+      "properties": {"element": {"enum": ["water", "wood", "metal", "earth", "fire"]}, "number": {"enum": [2, 3, 4, 5, 6]}, "ruleId": {"$ref": "#/$defs/ruleId"}}
+    },
+    "palaces": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"$ref": "#/$defs/palace"}},
+    "cycles": {"type": "array", "items": {"$ref": "#/$defs/cycle"}},
+    "contentHash": {"$ref": "#/$defs/hash"},
+    "warnings": {"type": "array", "items": {"type": "string", "maxLength": 500}}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "ruleId": {"type": "string", "minLength": 1, "maxLength": 120},
+    "branch": {"enum": ["zi", "chou", "yin", "mao", "chen", "si", "wu", "wei", "shen", "you", "xu", "hai"]},
+    "palace": {
+      "type": "object", "additionalProperties": false,
+      "required": ["palaceId", "branchId", "roleId", "placementRuleId", "stars"],
+      "properties": {
+        "palaceId": {"type": "string", "minLength": 1},
+        "branchId": {"$ref": "#/$defs/branch"},
+        "roleId": {"enum": ["menh", "huynh-de", "phu-the", "tu-tuc", "tai-bach", "tat-ach", "thien-di", "no-boc", "quan-loc", "dien-trach", "phuc-duc", "phu-mau"]},
+        "placementRuleId": {"$ref": "#/$defs/ruleId"},
+        "stars": {"type": "array", "items": {"$ref": "#/$defs/star"}}
+      }
+    },
+    "star": {
+      "type": "object", "additionalProperties": false,
+      "required": ["instanceId", "starId", "category", "scope", "ruleId", "brightness", "transformations"],
+      "properties": {
+        "instanceId": {"type": "string", "minLength": 1},
+        "starId": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+        "category": {"enum": ["major", "auxiliary"]},
+        "scope": {"const": "natal"},
+        "ruleId": {"$ref": "#/$defs/ruleId"},
+        "brightness": {"type": ["string", "null"], "enum": ["mieu", "vuong", "dac", "binh", "ham", null]},
+        "transformations": {"type": "array", "items": {"enum": ["loc", "quyen", "khoa", "ky"]}, "uniqueItems": true}
+      }
+    },
+    "cycle": {
+      "oneOf": [
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["scope", "status", "reasonCode"],
+          "properties": {"scope": {"enum": ["decadal", "minor-limit", "annual"]}, "status": {"const": "unavailable"}, "reasonCode": {"type": "string", "minLength": 1}}
+        },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["scope", "status", "year", "palaceId", "ruleId", "ageConvention", "startInclusive", "endExclusive"],
+          "properties": {
+            "scope": {"enum": ["decadal", "minor-limit", "annual"]}, "status": {"const": "computed"},
+            "year": {"type": "integer"}, "palaceId": {"type": "string", "minLength": 1}, "ruleId": {"$ref": "#/$defs/ruleId"},
+            "ageConvention": {"type": "string", "minLength": 1},
+            "startInclusive": {"type": "string", "format": "date-time"}, "endExclusive": {"type": "string", "format": "date-time"}
+          }
+        }
+      ]
+    }
+  }
+}

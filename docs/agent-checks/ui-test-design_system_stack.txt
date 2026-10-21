@@ -1,0 +1,8 @@
+test_design_system_with_stack_succeeds_and_says_stack_is_ignored (test_design_system_stack.TestStackFlagWithDesignSystem.test_design_system_with_stack_succeeds_and_says_stack_is_ignored) ... ok
+test_design_system_without_stack_stays_quiet (test_design_system_stack.TestStackFlagWithDesignSystem.test_design_system_without_stack_stays_quiet) ... ok
+test_stack_search_alone_never_warns (test_design_system_stack.TestStackFlagWithDesignSystem.test_stack_search_alone_never_warns) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.648s
+
+OK

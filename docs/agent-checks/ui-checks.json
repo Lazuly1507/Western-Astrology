@@ -1,0 +1,88 @@
+{
+  "python": "C:\\Users\\lazul\\AppData\\Local\\Python\\pythoncore-3.15-64\\python.exe",
+  "results": [
+    {
+      "name": "ui-data",
+      "args": [
+        ".agents/skills/ui-ux-pro-max/scripts/validate_data.py"
+      ],
+      "exitCode": 0,
+      "error": null,
+      "tests": null
+    },
+    {
+      "name": "ui-design-smoke",
+      "args": [
+        ".agents/skills/ui-ux-pro-max/scripts/search.py",
+        "Vietnamese astrology cultural mobile",
+        "--design-system",
+        "--format",
+        "markdown"
+      ],
+      "exitCode": 0,
+      "error": null,
+      "tests": null
+    },
+    {
+      "name": "ui-ux-smoke",
+      "args": [
+        ".agents/skills/ui-ux-pro-max/scripts/search.py",
+        "keyboard focus modal",
+        "--domain",
+        "ux",
+        "--json"
+      ],
+      "exitCode": 0,
+      "error": null,
+      "tests": null
+    },
+    {
+      "name": "ui-test-core",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".agents/skills/ui-ux-pro-max/scripts/tests",
+        "-p",
+        "test_core.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "error": null,
+      "tests": 39
+    },
+    {
+      "name": "ui-test-design_system_mode",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".agents/skills/ui-ux-pro-max/scripts/tests",
+        "-p",
+        "test_design_system_mode.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "error": null,
+      "tests": 26
+    },
+    {
+      "name": "ui-test-design_system_stack",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".agents/skills/ui-ux-pro-max/scripts/tests",
+        "-p",
+        "test_design_system_stack.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "error": null,
+      "tests": 3
+    }
+  ]
+}

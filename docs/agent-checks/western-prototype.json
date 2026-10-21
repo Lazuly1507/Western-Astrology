@@ -1,0 +1,352 @@
+{
+  "date": "2026-10-21",
+  "environment": "Chrome / CUA static prototype",
+  "syntheticOnly": true,
+  "functionalChecks": [
+    {
+      "name": "Keyboard node selection",
+      "pass": true,
+      "evidence": "Enter on Mars updates fact panel body:mars"
+    },
+    {
+      "name": "Shared selection across views",
+      "pass": true,
+      "evidence": "Constellation selected mars after switching"
+    },
+    {
+      "name": "Zoom",
+      "pass": true,
+      "evidence": "125 then reset100"
+    },
+    {
+      "name": "Skip link regression",
+      "pass": true,
+      "evidence": "Heading stays Bản đồ sao của bạn, activeElement main"
+    },
+    {
+      "name": "Invalid form",
+      "pass": true,
+      "evidence": "Empty submit shows error summary and focuses form-error"
+    },
+    {
+      "name": "Unknown-time flow",
+      "pass": true,
+      "evidence": "Time disabled, Big3 unavailable, no aspect edges or ASC/MC labels; fixture remains reference only"
+    },
+    {
+      "name": "Unknown-time AI and text escaping",
+      "pass": true,
+      "evidence": "Mock declines personal interpretation, no ASC/MC/houses; img string displayed as text, 0 injected images"
+    },
+    {
+      "name": "Advanced table",
+      "pass": true,
+      "evidence": "House and fact ID columns appear"
+    },
+    {
+      "name": "Two mock tones",
+      "pass": true,
+      "evidence": "Both cite body:sun synthetic-01, same Taurus12 position and uncertainty"
+    },
+    {
+      "name": "Guest/auth/save/delete",
+      "pass": true,
+      "evidence": "Guest save leads login, login does not auto-save; explicit save creates1, confirmed delete creates0"
+    },
+    {
+      "name": "Mobile chart",
+      "pass": true,
+      "evidence": "375px: stage scroll at125%, document stays359px; touch-style click selects Mars; reset available"
+    },
+    {
+      "name": "Reduced motion",
+      "pass": true,
+      "evidence": "Emulated reduce: scrollBehavior auto and node animation none; reset afterwards"
+    }
+  ],
+  "renderObservations": [
+    {
+      "client": 1264,
+      "page": "home",
+      "scroll": 1264,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "create",
+      "scroll": 1264,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "chart",
+      "scroll": 1264,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "ai",
+      "scroll": 1264,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1280,
+      "page": "dashboard",
+      "scroll": 1280,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "zodiac",
+      "scroll": 1264,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "learn",
+      "scroll": 1264,
+      "theme": "a",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "home",
+      "scroll": 1264,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "create",
+      "scroll": 1264,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "chart",
+      "scroll": 1264,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "ai",
+      "scroll": 1264,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1280,
+      "page": "dashboard",
+      "scroll": 1280,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "zodiac",
+      "scroll": 1264,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "learn",
+      "scroll": 1264,
+      "theme": "b",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "home",
+      "scroll": 1264,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "create",
+      "scroll": 1264,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "chart",
+      "scroll": 1264,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "ai",
+      "scroll": 1264,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 1280,
+      "page": "dashboard",
+      "scroll": 1280,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "zodiac",
+      "scroll": 1264,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 1264,
+      "page": "learn",
+      "scroll": 1264,
+      "theme": "c",
+      "width": 1280
+    },
+    {
+      "client": 359,
+      "page": "chart",
+      "scroll": 359,
+      "stageWidth": 325,
+      "theme": "a",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "chart",
+      "scroll": 359,
+      "stageWidth": 325,
+      "theme": "b",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "chart",
+      "scroll": 359,
+      "stageWidth": 325,
+      "theme": "c",
+      "width": 375
+    },
+    {
+      "client": 752,
+      "page": "chart",
+      "scroll": 752,
+      "theme": "a",
+      "width": 768
+    },
+    {
+      "client": 752,
+      "page": "chart",
+      "scroll": 752,
+      "theme": "b",
+      "width": 768
+    },
+    {
+      "client": 752,
+      "page": "chart",
+      "scroll": 752,
+      "theme": "c",
+      "width": 768
+    },
+    {
+      "client": 1008,
+      "page": "chart",
+      "scroll": 1008,
+      "theme": "a",
+      "width": 1024
+    },
+    {
+      "client": 1008,
+      "page": "chart",
+      "scroll": 1008,
+      "theme": "b",
+      "width": 1024
+    },
+    {
+      "client": 1008,
+      "page": "chart",
+      "scroll": 1008,
+      "theme": "c",
+      "width": 1024
+    },
+    {
+      "client": 1424,
+      "page": "chart",
+      "scroll": 1424,
+      "theme": "a",
+      "width": 1440
+    },
+    {
+      "client": 1424,
+      "page": "chart",
+      "scroll": 1424,
+      "theme": "b",
+      "width": 1440
+    },
+    {
+      "client": 1424,
+      "page": "chart",
+      "scroll": 1424,
+      "theme": "c",
+      "width": 1440
+    },
+    {
+      "client": 359,
+      "page": "home",
+      "scroll": 359,
+      "theme": "a",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "create",
+      "scroll": 359,
+      "theme": "a",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "ai",
+      "scroll": 359,
+      "theme": "a",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "dashboard",
+      "scroll": 359,
+      "theme": "a",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "zodiac",
+      "scroll": 359,
+      "theme": "a",
+      "width": 375
+    },
+    {
+      "client": 359,
+      "page": "learn",
+      "scroll": 359,
+      "theme": "a",
+      "width": 375
+    }
+  ],
+  "overflowFailures": [],
+  "limitations": [
+    "No ephemeris or numerical validation",
+    "No real Auth/RLS/OpenAI or persistence",
+    "No cross-browser E2E, physical touch-device or screen-reader audit",
+    "No full WCAG certification or CWV measurement"
+  ]
+}
